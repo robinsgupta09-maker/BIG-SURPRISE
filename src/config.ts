@@ -237,10 +237,10 @@ export const CONFIG: AppConfig = {
   gallery: {
     title: "Proof that we've survived each other",
     photos: [
-      { id: "photo1", src: "/assets/photo1.png", caption: "Certified chaos", rotation: "rotate-2" },
-      { id: "photo2", src: "/assets/photo2.png", caption: "Why did we think this was a good idea?", rotation: "-rotate-3" },
-      { id: "photo3", src: "/assets/photo3.png", caption: "Peak friendship", rotation: "rotate-1" },
-      { id: "photo4", src: "/assets/photo4.png", caption: "Another questionable decision", rotation: "-rotate-2" }
+      { id: "photo1", src: "assets/photo1.png", caption: "Certified chaos", rotation: "rotate-2" },
+      { id: "photo2", src: "assets/photo2.png", caption: "Why did we think this was a good idea?", rotation: "-rotate-3" },
+      { id: "photo3", src: "assets/photo3.png", caption: "Peak friendship", rotation: "rotate-1" },
+      { id: "photo4", src: "assets/photo4.png", caption: "Another questionable decision", rotation: "-rotate-2" }
     ]
   },
 
@@ -251,7 +251,7 @@ export const CONFIG: AppConfig = {
   },
 
   music: {
-    url: "/assets/cozy-music.mp3"
+    url: "assets/cozy-music.mp3"
   },
 
   entryExperience: {
@@ -277,9 +277,9 @@ export const CONFIG: AppConfig = {
   },
 
   photos: {
-    entry: "/assets/photos/photo-1.jpg",
-    welcome: "/assets/photos/photo-2.jpg",
-    final: "/assets/photos/photo-3.jpg"
+    entry: "assets/photos/photo-1.jpg",
+    welcome: "assets/photos/photo-2.jpg",
+    final: "assets/photos/photo-3.jpg"
   },
 
   finalMessage: `You're officially stuck with me.
