@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CONFIG } from "./config";
 import type { FoodOption } from "./config";
@@ -21,15 +21,17 @@ import { FriendshipQuestion } from "./components/FriendshipQuestion";
 import { FakePaymentScreen } from "./components/FakePaymentScreen";
 import { FinalScreen } from "./components/FinalScreen";
 
-enum Steps {
-  WELCOME = 0,
-  QUESTION = 1,
-  DATE = 2,
-  VIBE = 3,
-  FRIENDSHIP = 4,
-  FAKE_PAYMENT = 5,
-  FINAL = 6,
-}
+const Steps = {
+  WELCOME: 0,
+  QUESTION: 1,
+  DATE: 2,
+  VIBE: 3,
+  FRIENDSHIP: 4,
+  FAKE_PAYMENT: 5,
+  FINAL: 6,
+} as const;
+
+type Steps = typeof Steps[keyof typeof Steps];
 
 const TOTAL_STEPS = 6; // Welcome to Fake Payment are 6 steps with indicator (0 to 5)
 
@@ -48,7 +50,7 @@ export default function App() {
   const [friendshipAns, setFriendshipAns] = useState<string | null>(null);
 
   const nextStep = () => {
-    setStep((prev) => prev + 1);
+    setStep((prev) => (prev + 1) as Steps);
   };
 
   const resetSurprise = () => {
